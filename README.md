@@ -1,5 +1,5 @@
 
-Domain
+Domain [![Build Status](https://travis-ci.org/php-ddd/domain-event.svg?branch=master)](https://travis-ci.org/php-ddd/domain-event) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/php-ddd/domain-event/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/php-ddd/domain-event/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/php-ddd/domain-event/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/php-ddd/domain-event/?branch=master) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/a3b4f6d9-449e-4fca-97ad-710f2ca41642/mini.png)](https://insight.sensiolabs.com/projects/a3b4f6d9-449e-4fca-97ad-710f2ca41642)
 ======
 
 This library allows you to concentrate to what matters most in your application: the domain.  
