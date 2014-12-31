@@ -1,0 +1,35 @@
+application:
+    dependencies:
+        before:
+            - sudo composer self-update
+        override:
+            -
+                command: 'composer install --prefer-dist --no-progress --no-interaction'
+                idle_timeout: 600
+build:
+    dependencies:
+        before:
+            - sudo composer self-update
+        override:
+            -
+                command: 'composer install --prefer-dist --no-progress --no-interaction'
+                idle_timeout: 600
+tools:
+    external_code_coverage: true
+    php_analyzer: true
+    php_code_coverage: true
+    php_changetracking: true
+    php_code_sniffer:
+        config:
+            standard: "PSR2"
+    php_cs_fixer:
+        config: { level: psr2 }
+    php_mess_detector: true
+    php_pdepend: true
+    php_sim: true
+
+filter:
+    excluded_paths:
+        - 'tests/*'
+    paths:
+        - 'src/*'

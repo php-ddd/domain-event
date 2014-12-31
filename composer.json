@@ -1,0 +1,25 @@
+{
+    "name": "php-ddd/domain-event",
+    "description": "Library to manage domain and event",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {"PhpDDD\\Domain\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpDDD\\Domain\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Julien Dufresne"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "fabpot/php-cs-fixer": "dev-master"
+    }
+}

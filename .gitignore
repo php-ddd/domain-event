@@ -1,0 +1,13 @@
+
+# Composer
+composer.lock
+composer.phar
+vendor/
+
+# IDE
+.idea/
+
+# Dev tools
+.php_cs.cache
+build/
+phpunit.xml
