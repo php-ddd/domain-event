@@ -3,7 +3,7 @@
 namespace PhpDDD\Domain\Event\Listener\Locator;
 
 use PhpDDD\Domain\Event\EventInterface;
-use PhpDDD\Domain\Event\Listener\EventListenerCollection;
+use PhpDDD\Domain\Event\Listener\EventListenerInterface;
 
 /**
  * The purpose of this interface is to connect EventListeners to their Event.
@@ -16,12 +16,12 @@ interface EventListenerLocatorInterface
      *
      * @param EventInterface $event
      *
-     * @return EventListenerCollection
+     * @return EventListenerInterface[]
      */
     public function getEventListenersForEvent(EventInterface $event);
 
     /**
-     * @return EventListenerCollection[]
+     * @return EventListenerInterface[]
      */
     public function getRegisteredEventListeners();
 }

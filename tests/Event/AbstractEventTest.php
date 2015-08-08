@@ -5,6 +5,9 @@ namespace PhpDDD\Domain\Event;
 use PhpDDD\Domain\Exception\RuntimeException;
 use PHPUnit_Framework_TestCase;
 
+/**
+ *
+ */
 class AbstractEventTest extends PHPUnit_Framework_TestCase
 {
     /**

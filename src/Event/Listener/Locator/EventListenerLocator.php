@@ -3,8 +3,9 @@
 namespace PhpDDD\Domain\Event\Listener\Locator;
 
 use PhpDDD\Domain\Event\EventInterface;
-use PhpDDD\Domain\Event\Listener\EventListenerCollection;
 use PhpDDD\Domain\Event\Listener\EventListenerInterface;
+use PhpDDD\Domain\Exception\BadMethodCallException;
+use PhpDDD\Utils\ClassUtils;
 
 /**
  * Implementation of EventListenerLocatorInterface.
@@ -12,7 +13,7 @@ use PhpDDD\Domain\Event\Listener\EventListenerInterface;
 class EventListenerLocator implements EventListenerLocatorInterface
 {
     /**
-     * @var EventListenerCollection[]
+     * @var EventListenerInterface[]
      */
     private $listeners = array();
 
@@ -21,13 +22,14 @@ class EventListenerLocator implements EventListenerLocatorInterface
      */
     public function getEventListenersForEvent(EventInterface $event)
     {
-        $eventClassName     = get_class($event);
-        $listenerCollection = new EventListenerCollection($eventClassName);
-        if (array_key_exists($eventClassName, $this->listeners)) {
-            $listenerCollection = $this->listeners[$eventClassName];
+        $filteredListeners = array();
+        foreach ($this->listeners as $listener) {
+            if (true === $listener->isListeningTo($event)) {
+                $filteredListeners[] = $listener;
+            }
         }
 
-        return $listenerCollection;
+        return $filteredListeners;
     }
 
     /**
@@ -35,23 +37,18 @@ class EventListenerLocator implements EventListenerLocatorInterface
      */
     public function getRegisteredEventListeners()
     {
-        $listeners = array();
-        foreach ($this->listeners as $listenerCollection) {
-            $listeners[] = $listenerCollection;
-        }
-
-        return $listeners;
+        return $this->listeners;
     }
 
     /**
-     * @param string                 $eventClassName
      * @param EventListenerInterface $eventListener
      */
-    public function register($eventClassName, EventListenerInterface $eventListener)
+    public function register(EventListenerInterface $eventListener)
     {
-        if (!array_key_exists($eventClassName, $this->listeners)) {
-            $this->listeners[$eventClassName] = new EventListenerCollection($eventClassName);
+        $canonicalName = ClassUtils::getCanonicalName($eventListener);
+        if (array_key_exists($canonicalName, $this->listeners)) {
+            throw new BadMethodCallException('You can not register the same event listener more than once.');
         }
-        $this->listeners[$eventClassName]->add($eventListener);
+        $this->listeners[$canonicalName] = $eventListener;
     }
 }

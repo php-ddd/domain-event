@@ -3,7 +3,6 @@
 namespace PhpDDD\Domain\Event\Bus;
 
 use PhpDDD\Domain\Event\EventInterface;
-use PhpDDD\Domain\Event\Listener\EventListenerCollection;
 use PhpDDD\Domain\Event\Listener\EventListenerInterface;
 use PhpDDD\Domain\Event\Listener\Locator\EventListenerLocatorInterface;
 
@@ -44,8 +43,8 @@ class EventBus implements EventBusInterface
     }
 
     /**
-     * @param EventInterface                                   $event
-     * @param EventListenerCollection|EventListenerInterface[] $listeners
+     * @param EventInterface           $event
+     * @param EventListenerInterface[] $listeners
      *
      * @return array
      */

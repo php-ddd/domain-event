@@ -10,9 +10,11 @@ use PhpDDD\Domain\Event\EventInterface;
 interface EventListenerInterface
 {
     /**
-     * @return string the fully qualified name of the command class that this handler can accept.
+     * @param EventInterface $event
+     *
+     * @return bool true if the listener wants to handle the given event, false otherwise
      */
-    public function getSupportedEventClassName();
+    public function isListeningTo(EventInterface $event);
 
     /**
      * Handle the event.
