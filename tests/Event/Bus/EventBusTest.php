@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event\Bus;
 
 use PHPUnit_Framework_TestCase;

@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event\Listener\Locator;
 
 use PhpDDD\Domain\Event\EventInterface;

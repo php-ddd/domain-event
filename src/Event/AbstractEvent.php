@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event;
 
 use PhpDDD\Domain\Event\Utils\EventName;
@@ -6,7 +7,6 @@ use PhpDDD\Domain\Exception\RuntimeException;
 
 abstract class AbstractEvent implements EventInterface
 {
-
     /**
      * @var mixed
      */
@@ -15,7 +15,6 @@ abstract class AbstractEvent implements EventInterface
     /**
      * @param mixed $aggregateRootId
      *
-     * @return void
      * @throws RuntimeException When setting an aggregate id where one already exists.
      */
     public function setAggregateRootId($aggregateRootId)

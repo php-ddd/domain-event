@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event\Listener;
 
 use PhpDDD\Domain\Event\EventInterface;
@@ -8,7 +9,6 @@ use PhpDDD\Domain\Event\EventInterface;
  */
 interface EventListenerInterface
 {
-
     /**
      * @return string the fully qualified name of the command class that this handler can accept.
      */

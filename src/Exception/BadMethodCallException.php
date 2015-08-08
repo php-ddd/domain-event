@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Exception;
 
 use BadMethodCallException as Base;

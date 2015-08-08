@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event;
 
 use PhpDDD\Domain\Exception\RuntimeException;

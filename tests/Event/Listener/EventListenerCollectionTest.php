@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event\Listener;
 
 use PhpDDD\Domain\Exception\RuntimeException;
@@ -6,7 +7,6 @@ use PHPUnit_Framework_TestCase;
 
 class EventListenerCollectionTest extends PHPUnit_Framework_TestCase
 {
-
     public function testAddEventListenerForGoodEvent()
     {
         $mock = $this

@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event\Bus;
 
 use PhpDDD\Domain\Event\EventInterface;
@@ -7,11 +8,10 @@ use PhpDDD\Domain\Event\Listener\EventListenerInterface;
 use PhpDDD\Domain\Event\Listener\Locator\EventListenerLocatorInterface;
 
 /**
- * Implementation of EventBusInterface
+ * Implementation of EventBusInterface.
  */
 class EventBus implements EventBusInterface
 {
-
     /**
      * @var EventListenerLocatorInterface
      */

@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event\Listener;
 
 use ArrayIterator;
@@ -8,7 +9,6 @@ use PhpDDD\Domain\Exception\RuntimeException;
 
 class EventListenerCollection implements IteratorAggregate, Countable
 {
-
     /**
      * @var string
      */

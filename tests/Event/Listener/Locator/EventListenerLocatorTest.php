@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event\Listener\Locator;
 
 use PhpDDD\Domain\Event\Listener\EventListenerInterface;
@@ -6,7 +7,6 @@ use PHPUnit_Framework_TestCase;
 
 class EventListenerLocatorTest extends PHPUnit_Framework_TestCase
 {
-
     /**
      * @var EventListenerLocator
      */

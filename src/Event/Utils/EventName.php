@@ -1,10 +1,11 @@
 <?php
+
 namespace PhpDDD\Domain\Event\Utils;
 
 use PhpDDD\Domain\Event\EventInterface;
 
 /**
- * slugify an Event class name in order to display a nicer name than the FQCN
+ * slugify an Event class name in order to display a nicer name than the FQCN.
  */
 final class EventName
 {

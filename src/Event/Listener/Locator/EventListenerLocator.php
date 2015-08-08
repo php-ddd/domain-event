@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event\Listener\Locator;
 
 use PhpDDD\Domain\Event\EventInterface;
@@ -6,11 +7,10 @@ use PhpDDD\Domain\Event\Listener\EventListenerCollection;
 use PhpDDD\Domain\Event\Listener\EventListenerInterface;
 
 /**
- * Implementation of EventListenerLocatorInterface
+ * Implementation of EventListenerLocatorInterface.
  */
 class EventListenerLocator implements EventListenerLocatorInterface
 {
-
     /**
      * @var EventListenerCollection[]
      */

@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain\Event\Bus;
 
 use PhpDDD\Domain\Event\EventInterface;
@@ -17,7 +18,7 @@ interface EventBusInterface
 
     /**
      * Get the list of every EventListener defined in the EventBus.
-     * This might be useful for debug
+     * This might be useful for debug.
      *
      * @return EventListenerCollection[]
      */

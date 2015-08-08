@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain;
 
 use BadMethodCallException;
@@ -11,7 +12,6 @@ use PhpDDD\Domain\Event\Utils\EventName;
  */
 abstract class AbstractAggregateRoot
 {
-
     /**
      * @var int
      */

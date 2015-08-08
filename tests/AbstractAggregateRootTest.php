@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpDDD\Domain;
 
 use PhpDDD\Domain\Event\AbstractEvent;
