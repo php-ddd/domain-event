@@ -19,6 +19,9 @@
           <option name="ALIGN_CLASS_CONSTANTS" value="true" />
           <option name="MULTILINE_CHAINED_CALLS_SEMICOLON_ON_NEW_LINE" value="true" />
         </PHPCodeStyleSettings>
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
         <codeStyleSettings language="PHP">
           <option name="KEEP_LINE_BREAKS" value="false" />
           <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
